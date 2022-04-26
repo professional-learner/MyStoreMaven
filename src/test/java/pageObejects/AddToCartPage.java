@@ -22,14 +22,14 @@ public class AddToCartPage {
     WebElement checkOutButton;
 
 
-
-    public void conferm(){
+    public void conferm() {
         confMessage.click();
-        String  acctualM=confMessage.getText();
+        String acctualM = confMessage.getText();
         System.out.println(acctualM);
-        Assert.assertEquals("Product successfully added to your shopping cart",acctualM);
+        Assert.assertEquals("Product successfully added to your shopping cart", acctualM);
     }
-    public void  proceadToCheckOut(){
+
+    public void proceadToCheckOut() {
         checkOutButton.click();
     }
 

@@ -15,6 +15,7 @@ public class DescriptionPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(xpath = "//input[@name=\"qty\"]")
     WebElement quantityButton;
     @FindBy(id = "group_1")
@@ -25,17 +26,17 @@ public class DescriptionPage {
     WebElement addToCartButton;
 
 
-   public void choose(){
+    public void choose() {
 
-       quantityButton.clear();
-       quantityButton.sendKeys("2");
+        quantityButton.clear();
+        quantityButton.sendKeys("2");
 
-       Select select = new Select(productSize);
-       select.selectByVisibleText("M");
-       colour.click();
+        Select select = new Select(productSize);
+        select.selectByVisibleText("M");
+        colour.click();
 
-       addToCartButton.click();
-   }
+        addToCartButton.click();
+    }
 }
 
 
