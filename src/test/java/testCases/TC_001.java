@@ -4,9 +4,10 @@ package testCases;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 import pageObejects.AddToCartPage;
 import pageObejects.DescriptionPage;
 import pageObejects.HomePage;

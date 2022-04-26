@@ -1,10 +1,11 @@
 package testBase;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import utilities.ExcelReader;
 
 import java.time.Duration;
@@ -12,7 +13,7 @@ import java.time.Duration;
 public class BaseClass {
     public WebDriver driver;
     public ExcelReader excel = null;
-    @Before
+    @BeforeClass
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -21,7 +22,7 @@ public class BaseClass {
         driver.manage().window().maximize();
     }
 
-    @After
+    @AfterClass
     public void tearDown(){
         driver.quit();
 
